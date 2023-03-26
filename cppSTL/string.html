@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CPP STL Functions</title>
+  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/index1.css">
+<link rel="stylesheet" href="index.js">
+
+<!--Main Navigation-->
+<header >
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-body">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+        <a href="index.html" class="list-group-item list-group-item-action py-2">
+          <i class="fas fa-chart-area fa-fw me-3"></i><span>Introduction</span>
+        </a>
+        <a
+          href="vector.html"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Vector</span>
+        </a>
+        <a href="list.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>List</span></a
+        >
+        <a href="deque.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Deque</span></a
+        >
+        <a href="queue.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Queue</span></a
+        >
+        <a href="priorityQueue.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Priority Queue</span></a
+        >
+        <a href="stack.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Stack</span></a
+        >
+        <a href="set.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Set</span></a
+        >
+        <a href="map.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Map</span></a
+        >
+        <a href="pair.html" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>Pair</span></a
+        >
+        <a href="string.html" class="list-group-item list-group-item-action py-2 ripple active"
+          ><i class="fas fa-lock fa-fw me-3"></i><span>String</span></a
+        >
+      </div>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+
+  <!-- Navbar -->
+  <body>
+  <nav id="main-navbar" class="navbar navbar-custom">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row">
+        <div class="ele1">
+          <a
+          href="https://forms.gle/hREHirNKuDvVkQLDA"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Feedback</span>
+        </a>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Navbar -->
+</header>
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main style="margin-top: 58px;">
+  <body>
+    <div class="container pt-4">
+      <h1>Introduction</h1>
+      <ul>
+        <li>Stirng is different from the character array which we see in C.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Declaration</h1>
+        <ul>
+          <li><strong>Stirng s;</strong> </li>
+          <li>To take string input from console we write : <strong>getline(cin, s).</strong></li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Insertion and Deletion</h1>
+        <ul>
+          <li>To <em><ins>insert</ins></em> elements at the end of the string: <strong>s.push_back('char_you_want_to_insert');</strong></li>
+          <li>To <em><ins>delete</ins></em> last character from string: <strong>s.pop_back( );</strong></li>
+          <li><strong>s.erase( ), </strong>erases the whole string.</li>
+          <li><strong>s.erase(i, k), </strong>erases k characters from index i.</li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Properties</h1>
+        <ul>
+          <li>Length of the string : <strong>s.length( ).</strong></li>
+          <li><strong>s.capacity( ), </strong>returns the capacity allocated to the string which can be equal or more than the size of string.</li>
+          <li><strong>s.shrink_to_fit( ), </strong>decreases the capacity and makes it equal to minimum capacity of string.</li>
+          <li><strong>s1.swap(s2), </strong>swaps one string with another.</li>
+          <li><strong>s1.copy(<em>'target character array'</em>, <em>'starting position in the string to start copying'</em>, <em>'length to be copied'</em>), </strong>copies a portion of string to a character array.</li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Reversing</h1>
+        <ul>
+          <li><strong>reverse(s.begin(), s.end()), </strong>reverses the original string.</li>
+          <li><strong>String reverse_string = string(s.rbegin(), s.rend()), </strong>copies the reverse of a string to a new string.</li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Merging two strings</h1>
+        <ul>
+          <li><strong>s1.append(s2), </strong> appends s2 at the end of s1 (s1s2 - resultant string).</li>
+          <li>Simply we can merge them using '+' operator, <strong>String newMergedString = s1+s2;</strong></li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Finding a substring</h1>
+        <ul>
+          <li><strong>s1.find(s2), </strong>it checks if s2 is a substring of s1. If there is a substring, it returns the starting index of the string else it returns -1.</li>
+          <li><strong>s.substr(i, j-i+1), </strong> it returns the substring from index i to j.</li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Conversions</h1>
+        <ul>
+          <li><strong>isupper('char'), </strong>returns a boolean value true if the arguement contains any uppercase values. </li>
+          <li><strong>islpper('char'), </strong>returns a boolean value true if the arguement contains any lowercase values. </li>
+          <li><strong>toupper('char'), </strong>converts a character to uppercase. </li>
+          <li><strong>tolpper('char'), </strong>converts a character to lowercase. </li>
+        </ul>
+        <h4>String to int Conversion</h4>
+        <ul>
+            <li><strong>stoi(s), </strong>converts a string arguement to int from.</li>
+            <li><strong>int(char), </strong> returns the ascii value of the charcater.</li>
+            <li>
+                <p>Using <strong>string streams</strong>  we can convert a string to interger.</p>
+                <p>Let s be the string of numbers, we write <strong>stringstream g(s);</strong></p>
+                <p>After that int x = 0; and g>>x;</p>
+                <p>x is the integer form of string s.</p>
+            </li>
+            <li>Suppose s1 and s2 are two integer string we can compare both by <strong>s1.compare(s2) </strong> return >0 if s1>s2, return &lt0 if s1&lts2</li>
+            
+        </ul>
+        <h4>int to String Conversion</h4>
+        <ul>
+            <li><strong>to_string(a), </strong>converts an integer to string and returns the string value.</li>
+            <li><strong>char(int), </strong>returns the character with ascii value int.</li>
+            <li>
+                <p>Using <strong>string streams</strong>  we can convert a integer to string.</p>
+                <p>Let num be the interger, we write <strong>ostringstream g(s);</strong></p>
+                <p>After that we write g&lt&ltnum and string ans = g.str().</p>
+                <p>ans is the string form of integer num.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container pt-4">
+        <h1>Miscellaneous</h1>
+        <ul>
+          <li><strong>String binary = bitset&ltx>(n).to_string() </strong>converts a decimal n to x bit binary string.</li>
+        </ul>
+    </div>
+  </body>
+</main>
+<!--Main layout-->
+</html>
