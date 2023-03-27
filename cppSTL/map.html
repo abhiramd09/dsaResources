@@ -76,7 +76,7 @@
       </button>
 
       <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
+      <!-- <ul class="navbar-nav ms-auto d-flex flex-row"> -->
         <div class="ele1">
           <a
           href="https://forms.gle/hREHirNKuDvVkQLDA"
@@ -86,7 +86,16 @@
           <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Feedback</span>
         </a>
         </div>
-      </ul>
+        <div class="ele2">
+        <a
+          href="../index.html"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Home</span>
+        </a>
+        </div>
+      <!-- </ul> -->
     </div>
   </nav>
   
@@ -98,9 +107,116 @@
 <main style="margin-top: 58px;">
   <body>
     <div class="container pt-4">
-      <p class="intro">Welcome to our website, your ultimate destination for valuable study resources that will help you achieve academic success.</p>
-      <p class="intro">I've created this website to provide you with access to a wide range of tools that will help you excel in programming.</p>
-      <p class="intro">I hope that you find the study resources here helpful and informative.</p>
+      <h1>Introduction</h1>
+      <ul>
+        <li>Stores elements in a mapped function.</li>
+        <li>Each element has a key value and a mapped value.</li>
+        <li>No two mapped values can have the same type of key value.</li>
+        <li>There are four types of maps
+          <ol>
+            <li>map.</li>
+            <li>unordered_map.</li>
+            <li>multimap.</li>
+            <li>unordered_multimap.</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Map</h1>
+      <div class="container pt-3">
+        <h2>Declaration</h2>
+        <ul>
+          <li><strong>map&lt <em>'datatype1, datatype2'</em>> m; </strong> this is a declaration of an empty map.</li>
+          <li><strong>m.insert(pair&ltint, int>(1, 2));</strong> this is way to insert elements into map, assuming the two datatypes are integrs.</li>
+          <li><strong>map&ltint, int>m2(m1.begin(), m1.end());</strong>  assigning elements from map m1 to map m2.</li>
+        </ul>
+      </div>
+
+      <div class="container pt-3">
+        <h2>Iteration</h2>
+        <ul>
+          <li>
+            <p>First we need to declare an map iterator as <strong>map&ltint, int> :: iterator itr; </strong></p>
+            <p>for(itr = m.begin(); itr!=m.end(); itr++)</p>
+            <p>{ <strong>cout&lt&ltitr->first &lt&ltitr->second;</strong>  } this prints the key and value of that particular key.</p>
+          </li>
+          <li>
+            <p>We can also iterate a map with <strong>auto iterator</strong>  without actually declaring the map iterator.</p>
+            <p>for(auto i : m)</p>
+            <p><strong>cout&lt&lti.first&lt&lti.second;</strong> </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container pt-3">
+        <h2>Properties</h2>
+        <ul>
+          <li><strong>m.erase(m.begin(), m.find(3));</strong> removes all the elements upto element with key = 3 in m.</li>
+          <li><strong>m.erase(4)</strong> removes all the elements with key =4.</li>
+          <li><strong>m.size()</strong> returns the number of elements in map.</li>
+          <li><strong>m.empty()</strong> returns whether the map is empty.</li>
+          <li><strong>m.clear()</strong> removes all the elements from map.</li>
+          <li><strong>m.at(3)</strong> returns the associated or mapped element with key value 3.</li>
+          <li><strong>m1.swap(m2) or swap(m1, m2)</strong> swaps the contents of two maps.</li>
+          <li><strong>m.count(n)</strong> returns the number to element n in map.</li>
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="container pt-4">
+      <h1>Multimap</h1>
+
+      <div class="container pt-3">
+        <h2>Introduction</h2>
+        <ul>
+          <li>Similar to map with addition that multiple elements can have the same key.</li>
+          <li>Not required that key value and mapped value to be unique.</li>
+          <li>Multimap keeps all the keys in sorted order always.</li>
+        </ul>
+      </div>
+
+      <div class="container pt-3">
+        <h2>Declaration</h2>
+        <ul>
+          <li><strong>multimap&lt <em>'datatype1, datatype2'</em>> m; </strong> this is a declaration of an empty map.</li>
+          <li><strong>m.insert(pair&ltint, int>(1, 2));</strong> this is way to insert elements into map, assuming the two datatypes are integrs.</li>
+          <li><strong>multimap&ltint, int>m2(m1.begin(), m1.end());</strong>  assigning elements from map m1 to map m2.</li>
+        </ul>
+      </div>
+
+      <div class="container pt-3">
+        <h2>Iteration</h2>
+        <ul>
+          <li>
+            <p>First we need to declare an map iterator as <strong>multimap&ltint, int> :: iterator itr; </strong></p>
+            <p>for(itr = m.begin(); itr!=m.end(); itr++)</p>
+            <p>{ <strong>cout&lt&ltitr->first &lt&ltitr->second;</strong>  } this prints the key and value of that particular key.</p>
+          </li>
+          <li>
+            <p>We can also iterate a map with <strong>auto iterator</strong>  without actually declaring the map iterator.</p>
+            <p>for(auto i : m)</p>
+            <p><strong>cout&lt&lti.first&lt&lti.second;</strong> </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container pt-3">
+        <h2>Properties</h2>
+        <ul>
+          <li><strong>m.erase(m.begin(), m.find(3));</strong> removes all the elements upto element with key = 3 in m.</li>
+          <li><strong>m.erase(4)</strong> removes all the elements with key =4.</li>
+          <li><strong>m.size()</strong> returns the number of elements in map.</li>
+          <li><strong>m.empty()</strong> returns whether the map is empty.</li>
+          <li><strong>m.clear()</strong> removes all the elements from map.</li>
+          <li><strong>m.at(3)</strong> returns the associated or mapped element with key value 3.</li>
+          <li><strong>m1.swap(m2) or swap(m1, m2)</strong> swaps the contents of two maps.</li>
+          <li><strong>m.count(n)</strong> returns the number to element n in map.</li>
+        </ul>
+      </div>
+      
     </div>
   </body>
 </main>

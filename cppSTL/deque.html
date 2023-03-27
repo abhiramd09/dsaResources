@@ -76,7 +76,7 @@
       </button>
 
       <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
+      <!-- <ul class="navbar-nav ms-auto d-flex flex-row"> -->
         <div class="ele1">
           <a
           href="https://forms.gle/hREHirNKuDvVkQLDA"
@@ -86,7 +86,16 @@
           <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Feedback</span>
         </a>
         </div>
-      </ul>
+        <div class="ele2">
+        <a
+          href="../index.html"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Home</span>
+        </a>
+        </div>
+      <!-- </ul> -->
     </div>
   </nav>
   
@@ -98,10 +107,44 @@
 <main style="margin-top: 58px;">
   <body>
     <div class="container pt-4">
-      <p class="intro">Welcome to our website, your ultimate destination for valuable study resources that will help you achieve academic success.</p>
-      <p class="intro">I've created this website to provide you with access to a wide range of tools that will help you excel in programming.</p>
-      <p class="intro">I hope that you find the study resources here helpful and informative.</p>
+      <h1>Introduction</h1>
+      <ul>
+        <li>Similar to vectors but efficient in case of insertion and deletion.</li>
+        <li>Double ended queue are special case of queues where insertion and deletion are possible at both ends.</li>
+      </ul>
     </div>
+
+    <div class="container pt-4">
+      <h1>Declaration and Properties</h1>
+      <ul>
+        <li>A deque is declared as <strong>deque&lt<em>'datatype'</em>> d;</strong></li>
+        <li><strong>d.push_back('element') </strong>pushes element into deque from back.</li>
+        <li><strong>d.push_front('element') </strong>pushes element into deque from front.</li>
+        <li><strong>d.size() </strong>returns the size of number of elements in deque.</li>
+        <li><strong>d.front() </strong>referes to the first element of deque.</li>
+        <li><strong>d.back() </strong>referes to the last element of deque.</li>
+        <li><strong>d.pop_front() </strong>pops the element from front.</li>
+        <li><strong>d.pop_back() </strong>pops the element from back.</li>
+        <li><strong>d.resize() </strong>chamges the size deque.</li>
+        <li><strong>d.clear() </strong>deque becomes empty.</li>
+        <li><strong>d.empty() </strong>checks if the deque is empty or not.</li>
+        <li><strong>d.at(i) </strong> reference to the element at the given position</li>
+        <li><strong>d1.swap(d2) </strong>swaps the elements of deque.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Iteration</h1>
+      <ul>
+        <li>First we need to declare an iterator <strong>deque&lt<em>'datatype'</em>> :: iterator it = dq.begin();</strong> and itertate this over the deque.</li>
+        <li><strong>dq.insert(it, 10) </strong> inserting 10 at position it.</li>
+        <li><strong>dq.insert(it, 2, 0) </strong>inserting 0's 2 times at position it.</li>
+        <li><strong>dq.insert(it, v.begin(), v.end())</strong> inserting a vector <strong>vector&ltint>v</strong> to the deque.</li>
+        <li><strong>dq.erase(it) </strong> removes the elelemt from particular posistion.</li>
+        
+      </ul>
+    </div>
+
   </body>
 </main>
 <!--Main layout-->

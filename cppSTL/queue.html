@@ -76,7 +76,7 @@
       </button>
 
       <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
+      <!-- <ul class="navbar-nav ms-auto d-flex flex-row"> -->
         <div class="ele1">
           <a
           href="https://forms.gle/hREHirNKuDvVkQLDA"
@@ -86,7 +86,16 @@
           <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Feedback</span>
         </a>
         </div>
-      </ul>
+        <div class="ele2">
+        <a
+          href="../index.html"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Home</span>
+        </a>
+        </div>
+      <!-- </ul> -->
     </div>
   </nav>
   
@@ -98,10 +107,27 @@
 <main style="margin-top: 58px;">
   <body>
     <div class="container pt-4">
-      <p class="intro">Welcome to our website, your ultimate destination for valuable study resources that will help you achieve academic success.</p>
-      <p class="intro">I've created this website to provide you with access to a wide range of tools that will help you excel in programming.</p>
-      <p class="intro">I hope that you find the study resources here helpful and informative.</p>
+      <h1>Introduction</h1>
+      <ul>
+        <li>Queue is a <strong>First In First Out</strong> type of implementation.</li>
+        <li>Elements are inserted at the back and are deleted from front.</li>
+      </ul>
     </div>
+
+    <div class="container pt-4">
+      <h1>Declaration and Properties</h1>
+      <ul>
+        <li>Queue is declared as <strong>queue&lt<em>'datatype'</em>>q;</strong></li>
+        <li><strong>q.push('element') </strong>adds an element at the end of the queue.</li>
+        <li><strong>q.front() </strong>returns a reference to the first element of the queue.</li>
+        <li><strong>q.back() </strong>returns a reference to the last element of the queue.</li>
+        <li><strong>q.pop() </strong>deletes the first element of the queue.</li>
+        <li><strong>q.size() </strong>returns the size of the queue.</li>
+        <li><strong>q.empty() </strong>returns a boolean value weather the queue is empty.</li>
+        <li><strong>q1.swap(q2) </strong>exchanges the content of two queues, but queues must be of same data type, although size may differ.</li>
+      </ul>
+    </div>
+
   </body>
 </main>
 <!--Main layout-->

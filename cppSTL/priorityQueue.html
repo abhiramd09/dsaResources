@@ -76,7 +76,7 @@
       </button>
 
       <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
+      <!-- <ul class="navbar-nav ms-auto d-flex flex-row"> -->
         <div class="ele1">
           <a
           href="https://forms.gle/hREHirNKuDvVkQLDA"
@@ -86,7 +86,16 @@
           <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Feedback</span>
         </a>
         </div>
-      </ul>
+        <div class="ele2">
+        <a
+          href="../index.html"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Home</span>
+        </a>
+        </div>
+      <!-- </ul> -->
     </div>
   </nav>
   
@@ -98,10 +107,36 @@
 <main style="margin-top: 58px;">
   <body>
     <div class="container pt-4">
-      <p class="intro">Welcome to our website, your ultimate destination for valuable study resources that will help you achieve academic success.</p>
-      <p class="intro">I've created this website to provide you with access to a wide range of tools that will help you excel in programming.</p>
-      <p class="intro">I hope that you find the study resources here helpful and informative.</p>
+      <h1>Introduction</h1>
+      <ul>
+        <li>Similar to queue but <strong>first element of the queue is greatest of all elements</strong>  in the queue.</li>
+        <li>Elements are in non-increasing order, each element of the queue has a fixed priority.</li>
+        <li>A priorityQueue is also called a max-heap.</li>
+      </ul>
     </div>
+
+    <div class="container pt-4">
+      <h1>Declaration and Properties</h1>
+      <ul>
+        <li><strong>priority_queue&lt <em>'datatype'</em>>pq;</strong> this is how a priority queue is declared.</li>
+        <li><strong>pq.push('element')</strong> adds an element to the queue, <strong>not at the end.</strong> </li>
+        <li><strong>pq.pop() </strong>deletes the first element of the queue.</li>
+        <li><strong>pq.top() </strong>returns a reference to the topmost element of the queue.</li>
+        <li><strong>pq.size() </strong>returns the size of the queue.</li>
+        <li><strong>pq.empty() </strong>returns wheather the queue is empty.</li>
+        <li><strong>pq1.swap(pq2) </strong>swaps the content of two queues of same type.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Min-Heap</h1>
+      <ul>
+        <li>We can create a min-heap for the priority queue.</li>
+        <li>By default c++ creates a max heap for priority queue.</li>
+        <li>The declaration for min-heap is <strong>priority_queue&ltint, vector&ltint>, greater&ltint>>minHeap;</strong> the elememts are in increasind order.</li>
+      </ul>
+    </div>
+
   </body>
 </main>
 <!--Main layout-->
