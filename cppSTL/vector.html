@@ -107,9 +107,111 @@
 <main style="margin-top: 58px;">
   <body>
     <div class="container pt-4">
-      <p class="intro">Welcome to our website, your ultimate destination for valuable study resources that will help you achieve academic success.</p>
-      <p class="intro">I've created this website to provide you with access to a wide range of tools that will help you excel in programming.</p>
-      <p class="intro">I hope that you find the study resources here helpful and informative.</p>
+      <h1>Introduction</h1>
+      <ul>
+        <li>It is a <strong>dynamic array</strong> , has ability to resize itself.</li>
+        <li>Inserting an element at the end takes differential time, removing last element takes only constant time.</li>
+        <li>Inserting and erasing at the beginning or middle is linear in time.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Declaration and Insertion</h1>
+      <ul>
+        <li>A vector is declared as <strong>vector&lt<em>'datatype'</em>>v;</strong></li>
+        <li><strong>v.push_back(<em>'element_of_datatype'</em>)</strong>, adding element to vector v, element is added at the end of the vector.</li>
+        <li><strong>vector&ltvector&ltint>>V</strong>, declaration of a 2D vector.</li>
+        <li><strong>vector&ltvector&ltint>>V(n, vector&ltint>(m))</strong>, creating a vector with n rows and m columns.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Properties</h1>
+      <ul>
+        <li><strong>v.size()</strong>, returns the number of elements in vector.</li>
+        <li><strong>v.capacity()</strong>, returns the size of storage space currently allocated, expressed as number of elements.</li>
+        <li><strong>v.max_size()</strong>, returns the max number of elements a vector can hold.</li>
+        <li><strong>v.resize(n)</strong>, resizes container so it contains n elements.</li>
+        <li><strong>v.empty()</strong>, returns wheather the container is empty or not.</li>
+        <li><strong>v.shrint_to_fit()</strong>, reduces the capacity of container to fit its size and destroy all elements beyond capacity.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Element Access</h1>
+      <ul>
+        <li><strong>v[2], v.at(2)</strong>, returns reference to the element at position 2.</li>
+        <li><strong>v.front()</strong>, returns reference to the first element in vector.</li>
+        <li><strong>v.back()</strong>, returns reference to the last element in vector.</li>
+        <li><strong>v.data()</strong>, returns a direct pointer to memory array used internally by the vector to store its owned elements.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Modifiers</h1>
+      <ul>
+        <li><strong>v.assign('index', 'newValue')</strong>, assigning a new value at index replacing the old ones.</li>
+        <li><strong>v.pop_back()</strong>, removing last element.</li>
+        <li><strong>v.insert(v.begin(), 5)</strong>, inserts 5 at the beginning.</li>
+        <li><strong>v.erase(v.begin())</strong>, removes first element.</li>
+        <li><strong>v.emplace(v.begin(), 5)</strong>, extends container by inserting new element.</li>
+        <li><strong>v.emplace_back(20)</strong>, inserts 20 at the end.</li>
+        <li><strong>v.clear()</strong>, erases the vector.</li>
+        <li><strong>v1.swap(v2)</strong>, swaps v1 and v2(same type, but size may differ).</li>
+        <li><strong>replace(v.begin(), v.end(), old_val, new_val)</strong>, replacing old value with new value.</li>
+        <li><strong>reverse(v.begin(), v.end())</strong>, reverses the order of elements in vector.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Iterations</h1>
+      <ul>
+       <li>We need to add the <strong>#include&ltiterator></strong> to use the iterator.</li>
+       <li>
+        <p>for(auto i = <strong>v.begin()</strong> ; i!= <strong>v.end()</strong> ; ++i)</p>
+        <p>This loop iterates the elements of vector from start.</p>
+       </li>
+       <li>
+        <p>for(auto i= <strong>v.rbegin()</strong>; i!= <strong>v.rend()</strong> ; i++)</p>
+        <p>This loop iterates the elements from last.</p>
+       </li>
+       <li><strong>v.rbegin()</strong>, returns a reverse iterator pointing to the last element in the vector(moves from last to first).</li>
+       <li><strong>v.rend()</strong>, returns a reverse iterator pointing to theoritical element preceeding first element in vector.</li>
+       <li><strong>v.begin()</strong>, returns iterator pointing first element in vector.</li>
+       <li><strong>v.end()</strong>, returns an iterator pointing to the theoritical element that follows last element in the vector.</li>
+       <li><strong>v.cbegin()</strong>, returns a constant iterator pointing to first element in vector.</li>
+       <li><strong>v.cend()</strong>, returns a constant iterator pointing to the theoriticaal element that follows last element in vector.</li>
+       <li><strong>v.crbegin()</strong>, returns a constant reverse iterator pointing to last element in vector (moves from last to first).</li>
+       <li><strong>v.crend()</strong>, returns a constant reverse iterator pointing to theoritical element preceeding the first element in vector.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Sorting</h1>
+      <ul>
+       <li><strong>sort(v.begin(), v.end())</strong>, sorts the elements in <strong>ascending order</strong> .</li>
+       <li><strong>sort(v.begin(), v.end(), greater&ltint>())</strong>, sorts the elements in <strong>desending order</strong> .</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Finding an element in vector</h1>
+      <ul>
+        <li>Find function returns first element in the range that compares equal to the value, if no element matches, the function returns last.</li>
+        <li>Let there be a <strong>vector v</strong> and <strong>vector iterator it</strong> (initialised as <strong>vector&ltint> : : iterator it</strong>)</li>
+        <li><strong>it = std : : find(v.begin(), v.end(), 'element_to_be_checked')</strong></li>
+        <li>if it <strong>is not equal to v.end()</strong>, then element is located at <strong>it-v.begin()</strong>, else element is not found.</li>
+      </ul>
+    </div>
+
+    <div class="container pt-4">
+      <h1>Search</h1>
+      <ul>
+        <li>Finding out if a vector is subsequence of another vector.</li>
+        <li>Let there be <strong>two vectors v1 and v2</strong> and <strong>one iterator it</strong>.</li>
+        <li><strong>it = std : : search(v1.begin(), v1.end(), v2.begin(), v2.end());</strong></li>
+        <li>if it <strong>is not equal to v1.end()</strong>, then vector 2 is present at index <strong>it-v1.begin()</strong>, else vector 2 is not present.</li>
+      </ul>
     </div>
   </body>
 </main>
